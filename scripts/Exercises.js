@@ -59,7 +59,7 @@ function AugustSix() {
 		}
 	}
 
-	xhttp.open('GET', 'html/data.json', true);
+	xhttp.open('GET', 'html/AugustSix.html', true);
 	xhttp.send();
 }
 
