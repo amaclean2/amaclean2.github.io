@@ -25,14 +25,16 @@ h1 {
 
 .action-box {
 	width: 50vw;
-	height: 50vh;
+	height: 60vh;
 	border-radius: 3px;
 	box-shadow: 0 5px 15px #00000077;
 	background-color: #F6F6F6;
 	font-family: 'Roboto Mono', sans-serif;
-	padding: 10px;
+	padding: 15px;
 	box-sizing: border-box;
-	position: relative
+	position: relative;
+	display: block;
+	overflow: auto;
 }
 
 .date {
@@ -44,6 +46,53 @@ h1 {
 }
 
 .focus {
-	font-size: 20px;
-	margin: 25px 0;
+	font-size: 25px;
+	font-weight: bold;
+	margin: 40px 0;
+}
+
+.download-button {
+	color: #FFF;
+	background-color: #5588AA;
+	padding: 8px 20px;
+	display: inline-block;
+	margin: 15px;
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+	border-radius: 3px;
+	text-transform: uppercase;
+}
+
+.center-this {
+	margin: 30px;
+}
+
+code {
+	background-color: #333;
+	color: #FFF;
+	padding: 10px;
+	line-height: 40px;
+	border-radius: 3px;
+}
+
+.keys {
+	background-color: #99C6D8;
+}
+
+@media screen and (max-width: 1050px) {
+	.action-box {
+		width: 80vw;
+		height: 60vh;
+		text-align: center;
+		padding: 10px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.action-box {
+		width: 100vw;
+		height: 100vh;
+		text-align: center;
+		padding: 10px;
+	}
 }
