@@ -6,7 +6,7 @@ let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'S
 let today = new Date(),
 	year = today.getFullYear(),
 	month = today.getMonth(),
-	day = today.getDate(),
+	day = today.getDate() + 1,
 	weekday = today.getDay(),
 	todayString = days[weekday] + ' ' + months[month] + ' ' + day + ', ' + year;
 
@@ -49,6 +49,18 @@ function AugustFive() {
 					   // <code>cd TheLessonBox</code><br />
 					   // <code>ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime</code><br />
 					   // <code>sublime .</code><br /></div>`;
+}
+
+function AugustSix() {
+	let xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = () => {
+		if (this.readyState === 4 && this.status === 200 ) {
+			myEl.innerHTML = this.responseText;
+		}
+	}
+
+	xhttp.open('GET', 'html/AugustSix.html', true);
+	xhttp.send();
 }
 
 let functionName = months[month] + functions[day];
