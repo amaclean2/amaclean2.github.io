@@ -6,7 +6,7 @@ let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'S
 let today = new Date(),
 	year = today.getFullYear(),
 	month = today.getMonth(),
-	day = today.getDate() + 1,
+	day = today.getDate(),
 	weekday = today.getDay(),
 	todayString = days[weekday] + ' ' + months[month] + ' ' + day + ', ' + year;
 
@@ -51,11 +51,23 @@ function AugustFive() {
 					   // <code>sublime .</code><br /></div>`;
 }
 
+function AugustFive() {
+	let xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState === 4 && this.status === 200 ) {
+			myEl.innerHTML += this.responseText;
+		}
+	}
+
+	xhttp.open('GET', 'html/AugustFive.html', true);
+	xhttp.send();
+}
+
 function AugustSix() {
 	let xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (this.readyState === 4 && this.status === 200 ) {
-			myEl.innerHTML = this.responseText;
+			myEl.innerHTML += this.responseText;
 		}
 	}
 
