@@ -53,7 +53,7 @@ function AugustFive() {
 
 function AugustSix() {
 	let xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = () => {
+	xhttp.onreadystatechange = (response) => {
 		if (this.readyState === 4 && this.status === 200 ) {
 			myEl.innerHTML = this.responseText;
 		}
