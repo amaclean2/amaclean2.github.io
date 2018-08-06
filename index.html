@@ -4,11 +4,19 @@
 	<title>amaclean</title>
 	<link rel="stylesheet" href="css/style.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="UTF-8">
 </head>
 <body>
 	<h1>The Lesson Box</h1>
 	<div class="box-container">
 		<div class="action-box" id="actionBox"></div>
+	</div>
+	<div class="skip-buttons">
+		<button class="download-button" id="parentButton" onclick="showSkipButtons()">Show previous lessons</button>
+		<div class="button-box hidden-buttons" id="buttonBox">
+			<button class="download-button" onclick="moveBack()" id="backButton">Back</button>
+			<button class="download-button" onclick="moveForewards()" id="forewardButton" disabled>Forewards</button>
+		</div>
 	</div>
 	<script src="scripts/Exercises.js"></script>
 </body>
