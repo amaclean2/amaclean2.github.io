@@ -79,7 +79,7 @@ code {
 	color: #FFF;
 	padding: 10px;
 	border-radius: 3px;
-	white-space: pre-line;
+	white-space: nowrap;
 }
 
 .keys {
