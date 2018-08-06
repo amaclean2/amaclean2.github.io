@@ -6,7 +6,7 @@ let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'S
 let today = new Date(),
 	year = today.getFullYear(),
 	month = today.getMonth(),
-	day = today.getDate() + 3,
+	day = today.getDate(),
 	weekday = today.getDay(),
 	todayString = days[weekday] + ' ' + months[month] + ' ' + day + ', ' + year;
 
