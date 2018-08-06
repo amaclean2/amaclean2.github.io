@@ -17,32 +17,20 @@ let functions = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eig
 				'TwentyOne', 'TwentyTwo', 'TwentyThree', 'TwentyFour', 'TewntyFive', 'TwentySix', 'TwentySeven', 
 				'TwentyEight', 'TwentyNine', 'Thirty', 'ThirtyOne'];
 
-function httpCall(filePath) {
-	let xhttp = new XMLHttpRequest();
+let functionName = months[month] + functions[day];
+
+function httpCall() {
+	let xhttp = new XMLHttpRequest(),
+		file = 'html/' + functionName + '.html';
+
 	xhttp.onreadystatechange = function() {
 		if ( this.readyState === 4 && this.status === 200 ) {
 			myEl.innerHTML += this.responseText;
 		}
 	}
 
-	xhttp.open('GET', filePath, true);
+	xhttp.open('GET', file, true);
 	xhttp.send();
 }
 
-function AugustFour() {
-
-	httpCall('html/AugustFour.html');
-}
-
-function AugustFive() {
-
-	httpCall('html/AugustFive.html');
-}
-
-function AugustSix() {
-
-	httpCall('html/AugustSix.html');
-}
-
-let functionName = months[month] + functions[day];
-this[functionName]();
+httpCall();
