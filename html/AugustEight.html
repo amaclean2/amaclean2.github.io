@@ -1,10 +1,31 @@
-<div class="focus">Variables</div>
+<div class="focus">New Everything</div>
 If you have ExerciseOne.py open in Sublime, press <code class="keys">command + n</code> then <code class="keys">command + s</code><br />
 Save this file as <code>ExerciseTwo.py</code> in the same location as ExerciseOne.<br />
 Now you're going to write this program
 <div class="center-this">
-	<code>
-		a = 1
-		b = 1
-	</code>
+	<div class="code-block">
+def fibonacci(term) :
+	if term < 2 :
+		return 1
+	else :
+		count = 2
+		sum = 2
+		previousSum = 1
+		while count < term :
+			temp = previousSum
+			previousSum = sum
+			sum = sum + temp
+			count += 1
+		return sum
+
+print fibonacci(1)
+print fibonacci(3)
+print fibonacci(5)
+print fibonacci(10)
+	</div>
 </div>
+
+Save this file and then in your terminal window <code>cd ~/Desktop/TheLessonBox</code><br />
+Then <code>python ExerciseTwo.py</code>
+
+<br /><br />

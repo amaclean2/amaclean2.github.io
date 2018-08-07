@@ -90,4 +90,7 @@ let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'A
 
 let today, year, month, day, weekday, todayString, functionName;
 
-httpCall(new Date());
+let date = new Date();
+// date.setDate(date.getDate() + 1);
+
+httpCall(date);

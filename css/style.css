@@ -89,6 +89,16 @@ code {
 	white-space: nowrap;
 }
 
+.code-block {
+	background-color: #333;
+	color: #FFF;
+	padding: 0px 20px;
+	width: 80%;
+	border-radius: 3px;
+	display: inline-block;
+	white-space: pre-wrap;
+}
+
 .keys {
 	background-color: #99C6D8;
 }
