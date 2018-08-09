@@ -92,8 +92,7 @@ code {
 .code-block {
 	background-color: #333;
 	color: #FFF;
-	padding: 0px 20px;
-	width: 80%;
+	padding: 0px 100px 0 20px;
 	border-radius: 3px;
 	display: inline-block;
 	white-space: pre-wrap;
@@ -148,5 +147,9 @@ code {
 		height: 100vh;
 		text-align: center;
 		padding: 10px;
+	}
+
+	.code-block {
+		font-size: 13px;
 	}
 }
