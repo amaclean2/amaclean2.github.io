@@ -1,0 +1,36 @@
+<div class="focus">Fixing our Function</div>
+Yesterday we talked about making programs run in as few steps as possible and now we're going to apply that to our Primes function. <br>
+Right now the function loops through every element less that our parameter <code>test</code>, but we only need the first half of those since the last have would only contain multiples of the first half. <br>
+We can make it look like this
+<div class="center-this">
+	<div class="code-block">def isPrime(test) :
+	i = 2
+	half = test / 2
+	while i < half :
+		if test % i < 1 :
+			return False
+		i += 1
+	return True
+	</div>
+</div>
+This now makes it run in half the time it did before. That's a good start. <br>
+Now, there's some other shortcuts we can make. Look at this <br>
+<div class="center-this">
+	<div class="code-block">def isPrime(test) :
+	i = 3
+	half = test / 2
+
+	if test % 2 < 1 :
+		return False
+
+	while i < half :
+		if test % i < 1 :
+			return False
+		i += 2
+	return True
+	</div>
+</div>
+Now we're only testing a quarter of the values we were testing before. <br>
+Can you think of other ways to make it run better?
+
+<br><br>
